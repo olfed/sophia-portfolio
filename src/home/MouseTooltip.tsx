@@ -5,22 +5,26 @@ interface MouseTooltipProps {
 }
 
 export default function MouseTooltip({ text }: MouseTooltipProps) {
-  const tooltipRef = useRef(null)
+  const tooltipRef = useRef<HTMLDivElement | null>(null)
 
   useEffect(() => {
     if (!text) return
+
     const tooltipEl = tooltipRef.current
     if (!tooltipEl) return
+
     let animationFrameId: number
-    const handleMouseMove = (e: { clientX: number; clientY: number }) => {
-      if (tooltipEl) {
-        tooltipEl.style.transform = `translate(${e.clientX + 15}px, ${e.clientY + 15}px)`
-      }
+
+    const handleMouseMove = (e: MouseEvent) => {
+      tooltipEl.style.transform = `translate(${e.clientX + 15}px, ${e.clientY + 15}px)`
     }
-    const onMouseMove = (e: { clientX: number; clientY: number }) => {
+
+    const onMouseMove = (e: MouseEvent) => {
       animationFrameId = requestAnimationFrame(() => handleMouseMove(e))
     }
+
     window.addEventListener("mousemove", onMouseMove)
+
     return () => {
       window.removeEventListener("mousemove", onMouseMove)
       cancelAnimationFrame(animationFrameId)
