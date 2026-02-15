@@ -11,13 +11,13 @@ export default function MouseTooltip({ text }: MouseTooltipProps) {
     if (!text) return
     const tooltipEl = tooltipRef.current
     if (!tooltipEl) return
-    let animationFrameId
-    const handleMouseMove = (e) => {
+    let animationFrameId: number
+    const handleMouseMove = (e: { clientX: number; clientY: number }) => {
       if (tooltipEl) {
         tooltipEl.style.transform = `translate(${e.clientX + 15}px, ${e.clientY + 15}px)`
       }
     }
-    const onMouseMove = (e) => {
+    const onMouseMove = (e: { clientX: number; clientY: number }) => {
       animationFrameId = requestAnimationFrame(() => handleMouseMove(e))
     }
     window.addEventListener("mousemove", onMouseMove)
