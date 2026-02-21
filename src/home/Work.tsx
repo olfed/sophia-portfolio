@@ -30,7 +30,7 @@ export default function Work({ navigate }: Props) {
         className="cursor-pointer col-span-1 row-span-1 row-start-7 col-start-7 place-self-center w-35 h-15 bg-yellow-300 transition-transform duration-75 hover:-rotate-3"
       ></div>
       <div
-        onClick={() => navigate("project-spacefull-template")}
+        onClick={() => navigate("project-kanye-template")}
         className="cursor-pointer col-span-1 row-span-1 row-start-11 col-start-10 place-self-center w-20 h-30 bg-blue-300 transition-transform duration-75 hover:rotate-3"
       ></div>
     </div>
