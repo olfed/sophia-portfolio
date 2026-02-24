@@ -7,6 +7,7 @@ import Work from "./home/Work"
 import ProjectTemplate from "./home/ProjectTemplate"
 import ProjectSpacefullTemplate from "./home/ProjectSpacefullTemplate"
 import ProjectKanyeTemplate from "./home/ProjectKanyeTemplate"
+import Project5ColTemplate from "./home/Project5ColTemplate"
 
 function App() {
   const [page, setPage] = useState("home")
@@ -27,6 +28,10 @@ function App() {
       )}
       {page === "project-kanye-template" && (
         <ProjectKanyeTemplate navigate={navigate} />
+      )}
+
+      {page === "project-5col-template" && (
+        <Project5ColTemplate navigate={navigate} />
       )}
     </div>
   )

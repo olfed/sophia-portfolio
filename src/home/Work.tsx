@@ -22,7 +22,7 @@ export default function Work({ navigate }: Props) {
         className="cursor-pointer col-span-1 row-span-1 row-start-4 col-start-3 place-self-center w-15 h-35 bg-lime-300 transition-transform duration-75 hover:-rotate-3"
       ></div>
       <div
-        onClick={() => navigate("project-spacefull-template")}
+        onClick={() => navigate("project-5col-template")}
         className="cursor-pointer col-span-1 row-span-1 row-start-2 col-start-8 place-self-center w-30 h-30 bg-red-300 transition-transform duration-75 hover:rotate-3"
       ></div>
       <div
