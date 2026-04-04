@@ -14,7 +14,7 @@ export default function Work({ navigate }: Props) {
         </button>
       </div>
       <div
-        onClick={() => navigate("project-spacefull-template")}
+        onClick={() => navigate("project-experimental-template")}
         className="cursor-pointer col-span-1 row-span-1 row-start-9 col-start-5 place-self-center w-30 h-20 bg-fuchsia-300 transition-transform duration-75 hover:rotate-3"
       ></div>
       <div

@@ -8,6 +8,7 @@ import ProjectTemplate from "./home/ProjectTemplate"
 import ProjectSpacefullTemplate from "./home/ProjectSpacefullTemplate"
 import ProjectKanyeTemplate from "./home/ProjectKanyeTemplate"
 import Project5ColTemplate from "./home/Project5ColTemplate"
+import ProjectExperimentalTemplate from "./home/ProjectExperimentalTemplate"
 
 function App() {
   const [page, setPage] = useState("home")
@@ -32,6 +33,9 @@ function App() {
 
       {page === "project-5col-template" && (
         <Project5ColTemplate navigate={navigate} />
+      )}
+      {page === "project-experimental-template" && (
+        <ProjectExperimentalTemplate navigate={navigate} />
       )}
     </div>
   )
